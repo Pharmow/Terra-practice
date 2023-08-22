@@ -20,7 +20,7 @@ EOF
 # BREAKING CHANGE for major change (major version)
 
 mkdir -pv .github/workflows
-cd ..github/workflows
+cd ./.github/workflows
 
 cat <<EOF > semver.yaml
 name: Semantic Versioning
