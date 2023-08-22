@@ -5,7 +5,7 @@ resource "aws_instance" "launch_page" {
   key_name = var.key_pair
   vpc_security_group_ids = [aws_security_group.allow_tls.id, aws_security_group.allow_ssh.id]
   tags = {
-    "Name" = "Launcher"
+    "Name" = "xxxxxx"
   }
 }
 
