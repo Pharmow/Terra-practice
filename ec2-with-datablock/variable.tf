@@ -19,6 +19,6 @@ variable "instance_type" {
 variable "key_pair" {
   description = "My EC2 instance key pair"
   type = string
-  default = "Pharmow"
+  default = "enter_your_key"
   
 }
