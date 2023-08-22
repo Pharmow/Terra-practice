@@ -22,7 +22,7 @@ EOF
 mkdir -pv .github/workflows
 cd .github/workflows
 
-cat <<EOF > semver.yaml
+cat <<EOF > .github/workflows/semver.yaml
 name: Semantic Versioning
 
 on:
