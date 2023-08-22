@@ -1,17 +1,17 @@
-# npm install semantic-release @semantic-release/git @semantic-release/github -D
+npm install semantic-release @semantic-release/git @semantic-release/github -D
 
-# cat <<EOF > release.config.js
-# module.exports = {
-#     branches: "main",
-#     repositoryUrl: "https://github.com/Pharmow/Terra-practice.git",
-#     plugins: [
-#         '@semantic-release/commit-analyzer',
-#         '@semantic-release/release-notes-generator',
-#         '@semantic-release/git',
-#         '@semantic-release/github'
-#     ]
-# }
-# EOF
+cat <<EOF > release.config.js
+module.exports = {
+    branches: "main",
+    repositoryUrl: "https://github.com/Pharmow/Terra-practice.git",
+    plugins: [
+        '@semantic-release/commit-analyzer',
+        '@semantic-release/release-notes-generator',
+        '@semantic-release/git',
+        '@semantic-release/github'
+    ]
+}
+EOF
 # # Enter the url of the github repo you want to SemVer on line 6 
 
 # # Semantic versioning nomenclature
@@ -19,8 +19,8 @@
 # # feat for slight change (minor version)
 # # BREAKING CHANGE for major change (major version)
 
-# mkdir -pv .github/workflows
-# cd ./.github/workflows
+mkdir -pv .github/workflows
+cd ./.github/workflows
 
 cat <<EOF > semver.yaml
 name: Semantic Versioning
@@ -42,6 +42,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Semantic Release
         run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 EOF
+
+ # env:
+        #   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
