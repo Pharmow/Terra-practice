@@ -1,0 +1,24 @@
+git config --global commit.template ~/.gitmessage
+
+cat << EOF > .gitmessage
+
+############################################################
+
+# Contributing_to: enter your jira url
+
+############################################################
+
+#fix:
+
+#feat:
+
+#BREAK CHANGE:
+
+# Ensure you push codes to github in dev or other working branch and not main branch
+
+# After pushing, pull request and merge, ensure you switched back to main and pull --rebase
+
+# before switching back to your working branch
+
+EOF
+
